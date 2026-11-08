@@ -1,0 +1,796 @@
+{
+ "run_id": "20261018T165645Z-d383c1",
+ "mode": "live",
+ "started_utc": "2026-10-18T16:56:45.263142+00:00",
+ "runtime_s": 32.97,
+ "git_commit": "b67c37e55646f4d8f297e607b443fd4a6a6ef7ed",
+ "python": "3.12.11",
+ "packages": {
+  "autogen": "0.9.4",
+  "openai": "1.93.0",
+  "httpx": "0.28.1"
+ },
+ "case": {
+  "file": "Haematuria_all_cases.jsonl",
+  "index": 23,
+  "correct_diagnosis": "IgA Nephropathy (Berger's Disease)"
+ },
+ "role_specs": {
+  "doctor": "deepseek:deepseek-flash:disabled",
+  "patient": "deepseek:deepseek-flash:disabled",
+  "measurement": "deepseek:deepseek-flash:disabled",
+  "grader": "deepseek:deepseek-v4-pro:disabled"
+ },
+ "role_configs_redacted": {
+  "doctor": {
+   "config_list": [
+    {
+     "model": "deepseek-flash",
+     "base_url": "https://api.deepseek.com",
+     "api_key": "<set>",
+     "extra_body": {
+      "thinking": {
+       "type": "disabled"
+      }
+     }
+    }
+   ],
+   "temperature": 0.1
+  },
+  "patient": {
+   "config_list": [
+    {
+     "model": "deepseek-flash",
+     "base_url": "https://api.deepseek.com",
+     "api_key": "<set>",
+     "extra_body": {
+      "thinking": {
+       "type": "disabled"
+      }
+     }
+    }
+   ],
+   "temperature": 0.1
+  },
+  "measurement": {
+   "config_list": [
+    {
+     "model": "deepseek-flash",
+     "base_url": "https://api.deepseek.com",
+     "api_key": "<set>",
+     "extra_body": {
+      "thinking": {
+       "type": "disabled"
+      }
+     }
+    }
+   ],
+   "temperature": 0.1
+  },
+  "grader": {
+   "config_list": [
+    {
+     "model": "deepseek-v4-pro",
+     "base_url": "https://api.deepseek.com",
+     "api_key": "<set>",
+     "extra_body": {
+      "thinking": {
+       "type": "disabled"
+      }
+     }
+    }
+   ],
+   "temperature": 0.1
+  }
+ },
+ "error": null,
+ "result": {
+  "doctor_diagnosis": "IgA nephropathy (Berger's disease)",
+  "is_correct_repo_logic": true,
+  "grader_first_line": "YES"
+ },
+ "calls": [
+  {
+   "role": "Patient",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 2,
+   "latency_s": 1.671,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 61,
+    "prompt_tokens": 586,
+    "total_tokens": 647,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 586
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Doctor",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 3,
+   "latency_s": 1.313,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 36,
+    "prompt_tokens": 290,
+    "total_tokens": 326,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 290
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Patient",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 4,
+   "latency_s": 2.101,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 62,
+    "prompt_tokens": 687,
+    "total_tokens": 749,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 175
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Doctor",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 5,
+   "latency_s": 1.063,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 43,
+    "prompt_tokens": 392,
+    "total_tokens": 435,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 136
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Patient",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 6,
+   "latency_s": 1.506,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 36,
+    "prompt_tokens": 796,
+    "total_tokens": 832,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 156
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Doctor",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 7,
+   "latency_s": 1.287,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 44,
+    "prompt_tokens": 475,
+    "total_tokens": 519,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 256
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 219
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Patient",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 8,
+   "latency_s": 1.661,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 36,
+    "prompt_tokens": 880,
+    "total_tokens": 916,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 240
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Doctor",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 9,
+   "latency_s": 1.463,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 47,
+    "prompt_tokens": 559,
+    "total_tokens": 606,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 384
+    },
+    "prompt_cache_hit_tokens": 384,
+    "prompt_cache_miss_tokens": 175
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Patient",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 10,
+   "latency_s": 1.304,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 55,
+    "prompt_tokens": 967,
+    "total_tokens": 1022,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 768
+    },
+    "prompt_cache_hit_tokens": 768,
+    "prompt_cache_miss_tokens": 199
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Doctor",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 11,
+   "latency_s": 1.529,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 47,
+    "prompt_tokens": 665,
+    "total_tokens": 712,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 153
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Patient",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 12,
+   "latency_s": 1.219,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 20,
+    "prompt_tokens": 1073,
+    "total_tokens": 1093,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 896
+    },
+    "prompt_cache_hit_tokens": 896,
+    "prompt_cache_miss_tokens": 177
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Doctor",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 13,
+   "latency_s": 1.255,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 25,
+    "prompt_tokens": 736,
+    "total_tokens": 761,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 512
+    },
+    "prompt_cache_hit_tokens": 512,
+    "prompt_cache_miss_tokens": 224
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "MeasurementAssistant",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 14,
+   "latency_s": 1.784,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 44,
+    "prompt_tokens": 1875,
+    "total_tokens": 1919,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1875
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Doctor",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 15,
+   "latency_s": 0.995,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 25,
+    "prompt_tokens": 809,
+    "total_tokens": 834,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 640
+    },
+    "prompt_cache_hit_tokens": 640,
+    "prompt_cache_miss_tokens": 169
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "MeasurementAssistant",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 16,
+   "latency_s": 1.498,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 112,
+    "prompt_tokens": 1948,
+    "total_tokens": 2060,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 1792
+    },
+    "prompt_cache_hit_tokens": 1792,
+    "prompt_cache_miss_tokens": 156
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Doctor",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 17,
+   "latency_s": 1.412,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 82,
+    "prompt_tokens": 950,
+    "total_tokens": 1032,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 768
+    },
+    "prompt_cache_hit_tokens": 768,
+    "prompt_cache_miss_tokens": 182
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "MeasurementAssistant",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 18,
+   "latency_s": 1.762,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 150,
+    "prompt_tokens": 2146,
+    "total_tokens": 2296,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 1920
+    },
+    "prompt_cache_hit_tokens": 1920,
+    "prompt_cache_miss_tokens": 226
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Doctor",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 19,
+   "latency_s": 2.076,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 154,
+    "prompt_tokens": 1186,
+    "total_tokens": 1340,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 1024
+    },
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 162
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Patient",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 20,
+   "latency_s": 1.589,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 65,
+    "prompt_tokens": 1689,
+    "total_tokens": 1754,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 1024
+    },
+    "prompt_cache_hit_tokens": 1024,
+    "prompt_cache_miss_tokens": 665
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Doctor",
+   "requested_model": "deepseek-flash",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 21,
+   "latency_s": 2.281,
+   "returned_model": "deepseek-flash",
+   "usage": {
+    "completion_tokens": 227,
+    "prompt_tokens": 1409,
+    "total_tokens": 1636,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 1152
+    },
+    "prompt_cache_hit_tokens": 1152,
+    "prompt_cache_miss_tokens": 257
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Grader",
+   "requested_model": "deepseek-v4-pro",
+   "host": "api.deepseek.com",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 22,
+   "latency_s": 2.059,
+   "returned_model": "deepseek-v4-pro",
+   "usage": {
+    "completion_tokens": 53,
+    "prompt_tokens": 1548,
+    "total_tokens": 1601,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": {
+     "audio_tokens": null,
+     "cached_tokens": 0
+    },
+    "prompt_cache_hit_tokens": 0,
+    "prompt_cache_miss_tokens": 1548
+   },
+   "finish_reason": "stop"
+  }
+ ],
+ "calls_by_role": {
+  "MeasurementAssistant": 3,
+  "Doctor": 10,
+  "Grader": 1,
+  "Patient": 7
+ },
+ "unexpected_roles": [],
+ "http_requests": [
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  },
+  {
+   "method": "POST",
+   "host": "api.deepseek.com",
+   "path": "/chat/completions"
+  }
+ ],
+ "http_hosts": [
+  "api.deepseek.com"
+ ],
+ "usage_total": {
+  "prompt_tokens": 21666,
+  "completion_tokens": 1424,
+  "total_tokens": 23090,
+  "prompt_cache_hit_tokens": 13696,
+  "prompt_cache_miss_tokens": 7970
+ },
+ "cost": {
+  "usd_estimate": 0.002954,
+  "tier": "off-peak",
+  "unpriced_models": []
+ },
+ "original_db_sha256": {
+  "before": "254d7b74c03219c606db7c6933d06d368b6227ae687ebcd99c745223b3f47902",
+  "after": "254d7b74c03219c606db7c6933d06d368b6227ae687ebcd99c745223b3f47902",
+  "unchanged": true
+ },
+ "note": "conversation_log removed: it reproduces benchmark case content, which has no licence."
+}

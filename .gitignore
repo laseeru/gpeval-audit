@@ -1,0 +1,12 @@
+# Upstream benchmark clone (no licence; never commit its code or data)
+GP-EVAL/
+*.db
+*.jsonl
+# Local run outputs contain full conversations built from benchmark cases
+harness/runs/
+# Secrets and environments
+.env
+venv/
+.venv/
+__pycache__/
+.DS_Store

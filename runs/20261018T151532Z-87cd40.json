@@ -1,0 +1,247 @@
+{
+ "run_id": "20261018T151532Z-87cd40",
+ "mode": "mock",
+ "started_utc": "2026-10-18T15:15:32.561752+00:00",
+ "runtime_s": 0.18,
+ "git_commit": "b67c37e55646f4d8f297e607b443fd4a6a6ef7ed",
+ "python": "3.12.11",
+ "packages": {
+  "autogen": "0.9.4",
+  "openai": "1.93.0",
+  "httpx": "0.28.1"
+ },
+ "case": {
+  "file": "The febrile child_all_cases.jsonl",
+  "index": 24,
+  "correct_diagnosis": "Acute Otitis Media (Left)"
+ },
+ "role_specs": {
+  "doctor": "deepseek:deepseek-flash:disabled",
+  "patient": "gemini-2.0-flash",
+  "measurement": "gemini-2.0-flash",
+  "grader": "gemini-2.5-pro-preview-05-06"
+ },
+ "role_configs_redacted": {
+  "doctor": {
+   "config_list": [
+    {
+     "model": "deepseek-flash",
+     "base_url": "https://mock.invalid/v1",
+     "api_key": "<set>",
+     "extra_body": {
+      "thinking": {
+       "type": "disabled"
+      }
+     }
+    }
+   ],
+   "temperature": 0.1
+  },
+  "patient": {
+   "config_list": [
+    {
+     "model": "gemini-2.0-flash",
+     "api_key": "<set>",
+     "base_url": "https://mock.invalid/v1"
+    }
+   ],
+   "temperature": 0.1
+  },
+  "measurement": {
+   "config_list": [
+    {
+     "model": "gemini-2.0-flash",
+     "api_key": "<set>",
+     "base_url": "https://mock.invalid/v1"
+    }
+   ],
+   "temperature": 0.1
+  },
+  "grader": {
+   "config_list": [
+    {
+     "model": "gemini-2.5-pro-preview-05-06",
+     "api_key": "<set>",
+     "base_url": "https://mock.invalid/v1"
+    }
+   ],
+   "temperature": 0.1
+  }
+ },
+ "error": null,
+ "result": {
+  "doctor_diagnosis": "Acute otitis media (left)",
+  "is_correct_repo_logic": true,
+  "grader_first_line": "YES"
+ },
+ "calls": [
+  {
+   "role": "Patient",
+   "requested_model": "gemini-2.0-flash",
+   "host": "mock.invalid",
+   "temperature": 0.1,
+   "extra_body": null,
+   "n_messages": 2,
+   "latency_s": 0.002,
+   "returned_model": "mock::gemini-2.0-flash",
+   "usage": {
+    "completion_tokens": 20,
+    "prompt_tokens": 100,
+    "total_tokens": 120,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Doctor",
+   "requested_model": "deepseek-flash",
+   "host": "mock.invalid",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 3,
+   "latency_s": 0.0,
+   "returned_model": "mock::deepseek-flash",
+   "usage": {
+    "completion_tokens": 20,
+    "prompt_tokens": 100,
+    "total_tokens": 120,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Patient",
+   "requested_model": "gemini-2.0-flash",
+   "host": "mock.invalid",
+   "temperature": 0.1,
+   "extra_body": null,
+   "n_messages": 4,
+   "latency_s": 0.0,
+   "returned_model": "mock::gemini-2.0-flash",
+   "usage": {
+    "completion_tokens": 20,
+    "prompt_tokens": 100,
+    "total_tokens": 120,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Doctor",
+   "requested_model": "deepseek-flash",
+   "host": "mock.invalid",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 5,
+   "latency_s": 0.0,
+   "returned_model": "mock::deepseek-flash",
+   "usage": {
+    "completion_tokens": 20,
+    "prompt_tokens": 100,
+    "total_tokens": 120,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "MeasurementAssistant",
+   "requested_model": "gemini-2.0-flash",
+   "host": "mock.invalid",
+   "temperature": 0.1,
+   "extra_body": null,
+   "n_messages": 6,
+   "latency_s": 0.0,
+   "returned_model": "mock::gemini-2.0-flash",
+   "usage": {
+    "completion_tokens": 20,
+    "prompt_tokens": 100,
+    "total_tokens": 120,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Doctor",
+   "requested_model": "deepseek-flash",
+   "host": "mock.invalid",
+   "temperature": 0.1,
+   "extra_body": {
+    "thinking": {
+     "type": "disabled"
+    }
+   },
+   "n_messages": 7,
+   "latency_s": 0.0,
+   "returned_model": "mock::deepseek-flash",
+   "usage": {
+    "completion_tokens": 20,
+    "prompt_tokens": 100,
+    "total_tokens": 120,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+   },
+   "finish_reason": "stop"
+  },
+  {
+   "role": "Grader",
+   "requested_model": "gemini-2.5-pro-preview-05-06",
+   "host": "mock.invalid",
+   "temperature": 0.1,
+   "extra_body": null,
+   "n_messages": 8,
+   "latency_s": 0.0,
+   "returned_model": "mock::gemini-2.5-pro-preview-05-06",
+   "usage": {
+    "completion_tokens": 20,
+    "prompt_tokens": 100,
+    "total_tokens": 120,
+    "completion_tokens_details": null,
+    "prompt_tokens_details": null
+   },
+   "finish_reason": "stop"
+  }
+ ],
+ "calls_by_role": {
+  "Doctor": 3,
+  "MeasurementAssistant": 1,
+  "Grader": 1,
+  "Patient": 2
+ },
+ "unexpected_roles": [],
+ "http_requests": [],
+ "http_hosts": [],
+ "usage_total": {
+  "prompt_tokens": 700,
+  "completion_tokens": 140,
+  "total_tokens": 840,
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 0
+ },
+ "cost": {
+  "usd_estimate": 8.1e-05,
+  "tier": "off-peak",
+  "unpriced_models": [
+   "gemini-2.0-flash",
+   "gemini-2.5-pro-preview-05-06"
+  ]
+ },
+ "original_db_sha256": {
+  "before": "254d7b74c03219c606db7c6933d06d368b6227ae687ebcd99c745223b3f47902",
+  "after": "254d7b74c03219c606db7c6933d06d368b6227ae687ebcd99c745223b3f47902",
+  "unchanged": true
+ },
+ "note": "conversation_log removed: it reproduces benchmark case content, which has no licence."
+}
