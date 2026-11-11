@@ -89,11 +89,9 @@ Use `--mock` first (no network, no cost). Live mode refuses retired model names.
 
 ## Status
 - **Clinical review of the three smoke-test conversations:** completed 8 Nov 2026 (above).
-- **GP-EVAL authors:** I discussed these findings with a member of the Cao Lab before publishing. The project is archived, and they were happy for the results to be shared.
+- **GP-EVAL authors:** I discussed these findings with a member of the Cao Lab before publishing. The project is currently archived.
 - This is unpublished, exploratory work. Corrections are welcome; please open an issue.
 
-## How this was built
-I wrote this with substantial help from an AI assistant (Claude) for code, documentation and first-draft case notes. I directed the work and ran it. I reviewed every clinical observation against the case data myself, and I am responsible for every claim here.
 
 ## Credit
 GP-EVAL / Multi-Med was built by its authors (repository by `jamesl385`, associated with the Cao Lab, Monash University). This audit is meant to help make benchmarks like it more trustworthy, not to diminish the work.
