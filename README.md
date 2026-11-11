@@ -2,7 +2,7 @@
 
 An independent, exploratory audit of **GP-EVAL / Multi-Med** ([github.com/jamesl385/GP-EVAL](https://github.com/jamesl385/GP-EVAL), commit `b67c37e`). This is a public benchmark in which an LLM "doctor" interviews an LLM "patient", requests examination findings and tests from a "measurement assistant", and is scored by an LLM "grader". Its published results database holds **4,056 runs** (13 models × 312 cases).
 
-I am a medical doctor (MD, Havana 2026). I did this because I did not want to trust a leaderboard number until I had checked how it was produced. The question behind it: **when a benchmark says a model "diagnosed" a case, what exactly was measured?**
+I am a medical doctor (MD, Havana 2026). I did this because I did not want to trust a benchmark score until I had checked how it was produced. The question behind it: **when a benchmark says a model "diagnosed" a case, what exactly was measured?**
 
 > **What this repository is not.** It contains none of GP-EVAL's code or data; that repository has no licence. To reproduce anything, clone GP-EVAL yourself (see [Reproducing](#reproducing)). Findings below are aggregate counts plus run identifiers.
 
@@ -50,7 +50,7 @@ To check that the pipeline still runs, I wrote an instrumented single-case runne
 | Acute abdominal pain #1 | Acute appendicitis | correct, 11 calls |
 | Haematuria #23 | IgA nephropathy | correct, 21 calls |
 
-**Configuration (a deviation from the paper's setup, because the originals are retired):** all roles used DeepSeek (`deepseek-flash` for doctor, patient and measurement; `deepseek-v4-pro` for grader), with thinking off and temperature 0.1. Totals: 45 calls, about US$0.006. Sanitised run records (no conversations) are in [`runs/`](runs/).
+**Configuration (a deviation from the repository's default setup, because the original models are retired):** all roles used DeepSeek (`deepseek-flash` for doctor, patient and measurement; `deepseek-v4-pro` for grader), with thinking off and temperature 0.1. Totals: 45 calls, about US$0.006. Sanitised run records (no conversations) are in [`runs/`](runs/).
 
 **Limitations:** three hand-picked cases, one vendor for every role (self-preference bias is possible), and model aliases that change over time. This shows the pipeline runs; it is not an evaluation of any model.
 
